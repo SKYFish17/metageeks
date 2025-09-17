@@ -1,0 +1,11 @@
+//----------------------------------------
+// Gutenberg Block Styles
+//
+// Import Core and custom Gutenberg block partials.
+//----------------------------------------
+
+// Core Gutenberg Blocks.
+@import 'core/index.scss';
+
+// Custom Gutenberg Blocks.
+@import 'gutenberg/index.scss';

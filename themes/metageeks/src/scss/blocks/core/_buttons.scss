@@ -1,0 +1,6 @@
+a.has-purple-background-color {
+	&:hover,
+	&:focus {
+		background-color: $accent_hover;
+	}
+}

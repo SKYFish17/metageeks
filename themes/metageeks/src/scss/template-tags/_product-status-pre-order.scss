@@ -1,0 +1,29 @@
+.product-status-pre-order {
+	display: flex;
+	align-items: center;
+
+	.stock {
+		flex-shrink: 0;
+		margin-bottom: 0;
+		margin-right: 10px;
+		padding: 5px 10px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.4;
+		color: #fff;
+		border-radius: 8px;
+		text-transform: uppercase;
+		background-color: $orange;
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	&__date {
+		font-weight: 700;
+		color: $orange;
+	}
+}

@@ -1,0 +1,99 @@
+.search-form {
+	margin-right: 30px;
+	max-width: 792px;
+	width: 100%;
+
+	&__wrapper {
+		display: flex;
+		position: relative;
+	}
+
+	&__label {
+		@include indent-reset();
+		position: relative;
+		min-width: 100%;
+		width: 100%;
+	}
+
+	&__input:not(.button) {
+		@include indent-reset();
+		padding: 13px 83px 13px 15px;
+		width: 100%;
+		font-family: Ubuntu, sans-serif;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 18px;
+		background-color: $white;
+		border-radius: 8px;
+		border: 1px solid $stroke;
+		outline: none;
+
+		&::placeholder {
+			color: $dark_gray;
+		}
+
+		&:hover {
+			border-color: $steel_gray;
+			cursor: pointer;
+		}
+	}
+
+	&__submit {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 4px;
+		@include indent-reset();
+		padding: 8px 22px;
+		background-color: $accent;
+		border-radius: 8px;
+
+		svg {
+			margin-right: 0;
+			width: 20px;
+			height: 20px;
+			fill: #fff;
+		}
+
+		&:hover {
+			background-color: $accent_hover;
+		}
+	}
+
+	&__error {
+		background-color: #EDDAE0;
+		padding: 12px 38px;
+		font-size: 14px;
+		line-height: 16px;
+		color: #DD3F3B;
+		border-radius: 4px;
+		margin-top: 10px;
+		width: 100%;
+	}
+}
+
+.ui-autocomplete.ui-front {
+	margin: 4px 0 4px 0;
+	max-width: 463px;
+	width: 100%;
+	background: $white;
+	border: 1px solid $text_main;
+	box-shadow: 0 12px 16px -4px rgba(16, 24, 40, 0.1), 0 4px 6px -2px rgba(16, 24, 40, 0.05);
+	border-radius: 8px;
+
+	.ui-menu-item {
+		padding: 10px 40px 10px 14px;
+		cursor: pointer;
+
+		&:hover {
+			color: $text_main;
+			background: rgba(129, 50, 74, 0.07);
+		}
+	}
+}
+
+@media (max-width: 495px) {
+	.ui-autocomplete.ui-front {
+		width: calc(100% - 32px);
+	}
+}

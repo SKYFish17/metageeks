@@ -1,0 +1,28 @@
+//----------------------------------------
+// Captions - Core Gutenberg Block
+// For Images, Galleries, Audio, and Video Embeds
+//----------------------------------------
+
+.wp-block-gallery .blocks-gallery-item figcaption,
+.wp-block-image figcaption {
+	position: relative;
+	width: 100%;
+	text-align: left;
+	background: none;
+	padding-top: 7px;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	color: $steel_gray;
+	font-size: 14px;
+	line-height: 1.4;
+	background-image: none;
+
+	a {
+		color: $accent;
+
+		&:hover,
+		&:focus {
+			color: $accent_hover;
+		}
+	}
+}

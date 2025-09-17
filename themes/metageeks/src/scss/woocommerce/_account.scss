@@ -1,0 +1,263 @@
+//----------------------------------------
+// Woocommerce My-Account Styles
+//----------------------------------------
+
+.metageeks-account,
+body.woocommerce-account:not(.logged-in) {
+	.woocommerce-notices-wrapper {
+		position: absolute;
+
+		> * {
+			position: relative;
+			display: block;
+			width: 100%;
+			max-width: 320px;
+			padding: 14px 16px 16px 16px;
+			background: #fff;
+			box-shadow: 0 22px 43px rgba(0,0,0,.08);
+			border-radius: 6px;
+			overflow: hidden;
+			color: $dark_steel_gray;
+
+			&::before {
+				content: '';
+				display: block;
+				padding-left: 28px;
+				font-weight: 700;
+				font-size: 18px;
+				line-height: 21px;
+				margin-bottom: 8px;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				display: block;
+				width: 100%;
+				height: 2px;
+			}
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		.woocommerce-message::before {
+			content: 'Success';
+			background: url(../images/success-circle.svg) no-repeat;
+		}
+
+		.woocommerce-message::after {
+			background: $green;
+		}
+
+		.woocommerce-error::before {
+			content: 'Error';
+			background: url(../images/error-circle.svg) no-repeat;
+		}
+
+		.woocommerce-error::after {
+			background: $red;
+		}
+	}
+}
+
+.metageeks-account .woocommerce-notices-wrapper {
+	top: -14px;
+	right: 0;
+}
+
+body.woocommerce-account:not(.logged-in) .woocommerce-notices-wrapper {
+	top: 15px;
+	right: 15px;
+}
+
+
+.metageeks-account {
+	position: relative;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		max-width: 1015px;
+		margin: 48px auto 120px auto;
+
+		@media (max-width: $mobile) {
+			justify-content: flex-start;
+			flex-direction: column;
+			margin: 18px auto 80px auto;
+		}
+	}
+
+	&__content {
+		flex: 1 1 759px;
+		border: 1px solid $stroke;
+		box-shadow: 0 4px 6px rgba(0,0,0,.1);
+		border-radius: 10px;
+		padding: 30px;
+
+		a {
+			color: $accent;
+		}
+
+		@media (max-width: $mobile) {
+			flex: 0;
+			margin-top: 15px;
+			padding: 20px 15px 30px 15px;
+		}
+	}
+
+	&-navigation {
+		flex: 1 1 236px;
+		margin-right: 20px;
+
+		@media (max-width: $mobile) {
+			position: relative;
+			margin-right: 0;
+			flex: 0;
+		}
+
+		&__header {
+			font-family: 'hwt_artz', sans-serif;
+			font-size: 24px;
+			line-height: 26px;
+			color: #fff;
+			text-transform: uppercase;
+			padding: 20px 16px;
+			background: $accent;
+			border-radius: 10px;
+			margin-bottom: 10px;
+
+			@media (max-width: 900px) {
+				padding: 15px;
+				text-align: center;
+				margin-bottom: 15px;
+			}
+		}
+
+		&__toggler {
+			display: none;
+
+			@media (max-width: 900px) {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+				background: none;
+				outline: 0;
+				padding: 10px 14px;
+				border: 1px solid $stroke;
+				border-radius: 8px;
+				color: $accent;
+				font-weight: 700;
+			}
+		}
+
+		&__menu {
+
+			@media (max-width: 900px) {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				z-index: 1;
+				width: 100%;
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.4s ease-in-out;
+				box-shadow: 0 12px 16px -4px rgba(16, 24, 40, 0.1), 0 4px 6px -2px rgba(16, 24, 40, 0.05);
+				border-radius: 8px;
+			}
+
+			ul {
+				margin-bottom: 0;
+
+				@media (max-width: 900px) {
+					padding-top: 3px;
+					padding-bottom: 3px;
+					background: #fff;
+					border: 1px solid $stroke;
+					border-radius: 8px;
+				}
+			}
+
+			li {
+				margin-bottom: 4px;
+
+				@media (max-width: 900px) {
+					margin-bottom: 0;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				&.is-active {
+					a {
+						padding: 8px 10px;
+						background: $silver_white;
+						color: $accent;
+						font-weight: 700;
+
+						@media (max-width: 900px) {
+							padding: 10px 14px;
+							background: rgba(129, 50, 74, 0.07);
+							font-weight: 500;
+
+							span {
+								color: $text_main;
+							}
+
+							&::after {
+								content: '';
+								display: block;
+								background: url(../images/check.svg) no-repeat;
+								width: 20px;
+								height: 20px;
+								margin-left: auto;
+							}
+						}
+					}
+				}
+
+				a {
+					display: flex;
+					align-items: center;
+					color: $dark_gray;
+					text-decoration: none;
+					padding: 8px 14px;
+					line-height: 1.4;
+					border-radius: 10px;
+					transition: background .2s ease-in-out;
+
+					@media (max-width: 900px) {
+						border-radius: 0;
+						padding: 10px 14px;
+					}
+
+					&:hover {
+						background: $silver_white;
+					}
+
+					svg {
+						margin-right: 8px;
+					}
+
+				}
+			}
+
+		}
+
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 23px;
+		margin-bottom: 20px;
+	}
+
+}

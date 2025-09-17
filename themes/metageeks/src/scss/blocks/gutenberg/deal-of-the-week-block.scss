@@ -1,0 +1,342 @@
+.deal-of-the-week-block {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	display: flex;
+	min-height: 574px;
+	background-color: $light_gray;
+
+	.content {
+		position: relative;
+		margin-left: 38.5px;
+		display: flex;
+		max-width: 404px;
+	}
+
+	.text {
+		.title {
+			@include indent-reset();
+			margin-bottom: 25px;
+			font-family: 'hwt_artz', sans-serif;
+			font-size: 40px;
+			font-weight: 700;
+			line-height: 43px;
+			color: $accent;
+		}
+
+		.subtitle {
+			display: block;
+			@include indent-reset();
+			margin-bottom: 25px;
+			font-family: Ubuntu, sans-serif;
+			font-size: 20px;
+			font-weight: 500;
+			line-height: 23px;
+			color: $text_main;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.desc {
+			@include indent-reset();
+			margin-bottom: 30px;
+			font-family: Ubuntu, sans-serif;
+			font-size: 16px;
+			line-height: 1.4;
+			color: $steel_gray;
+		}
+
+		.shop {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+
+			.prices {
+				@include indent-reset();
+				margin-right: 39px;
+				display: flex;
+				flex-direction: row-reverse;
+				align-items: baseline;
+
+				ins {
+					margin-right: 13px;
+					font-size: 24px;
+					font-weight: 700;
+					line-height: 28px;
+					text-decoration: none;
+				}
+
+				del {
+					font-size: 18px;
+					line-height: 21px;
+					color: $steel_gray;
+				}
+			}
+
+			.btn {
+				padding: 13px 29px;
+				display: flex;
+				flex-direction: row-reverse;
+				align-items: center;
+
+				svg {
+					margin-right: 11px;
+					fill: none;
+					stroke: #fff;
+				}
+			}
+
+			/* stylelint-disable*/
+			.added_to_cart {
+				display: none;
+			}
+
+			/* stylelint-enable*/
+		}
+	}
+
+	.images {
+		position: absolute;
+		top: 0;
+		left: calc(100% + 60px);
+		width: calc(100vw - 564px);
+		height: 454px;
+
+		&:not(.slick-slider) {
+			display: flex;
+			background-color: #e2e2e2;
+			overflow: hidden;
+			.image-wrapper {
+				flex-shrink: 0;
+				width: 404px;
+				margin-right: 24px;
+			}
+		}
+
+		a {
+			display: block;
+		}
+
+		img {
+			background-color: $light_gray;
+		}
+
+		.slick-slide {
+			img {
+				width: 404px;
+				height: 454px;
+				transform: scaleX(0.92) scaleY(0.92) translateY(-20px);
+				transition: linear $normal;
+				border-radius: 8px;
+			}
+
+			&.slick-current {
+				img {
+					transform: scaleX(0.95) scaleY(1) translateX(-6px) translateY(0);
+					transition: linear $normal;
+					animation: show 2s 1;
+					animation-fill-mode: forwards;
+					animation-delay: 0s;
+				}
+			}
+		}
+
+		.slick-dots {
+			@include list-reset();
+			position: absolute;
+			top: 95%;
+			left: calc(400px + 24px);
+			display: flex;
+			flex-wrap: wrap;
+
+			li {
+				position: relative;
+				width: 27px;
+				height: 27px;
+
+				&:not(:last-child) {
+					margin-right: 4px;
+				}
+
+				button {
+					@include indent-reset();
+					margin: 8px;
+					width: 11px;
+					height: 11px;
+					font-size: 11px;
+					color: transparent;
+					background-color: $stroke;
+					border-radius: 50%;
+				}
+
+				&.slick-active {
+					// &:not(:first-child) {
+					// 	margin-left: 12px;
+					// }
+
+					// &:not(:last-child) {
+					// 	margin-right: 12px;
+					// }
+
+					&::before {
+						position: absolute;
+						content: '';
+						top: 0;
+						left: 0;
+						z-index: 2;
+						width: 27px;
+						height: 27px;
+						background-image: url(../images/icons/deal-slider-circle.svg);
+					}
+
+					button {
+						background-color: $accent;
+					}
+				}
+
+				/* stylelint-disable*/
+				// + .slick-active {
+				// 	margin-left: 8px !important;
+				// }
+				/* stylelint-enable*/
+			}
+		}
+	}
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@media (max-width: 1200px) {
+	.deal-of-the-week-block {
+		padding-bottom: 80px;
+		min-height: 594px;
+
+		.content {
+			margin-left: 40px;
+			max-width: 400px;
+		}
+
+		.images {
+			left: calc(100% + 40px);
+			width: calc(100vw - 512px);
+
+			&:not(.slick-slider) {
+				.image-wrapper {
+					width: 404px;
+				}
+			}
+
+			.slick-dots {
+				top: calc(100% + 30px);
+				left: 0;
+			}
+		}
+	}
+}
+
+
+@media (max-width: $mobile) {
+	.deal-of-the-week-block {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		min-height: 616px;
+
+		.content {
+			margin-left: 0;
+			max-width: 100%;
+			display: block;
+		}
+
+		.text {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.title {
+				margin-bottom: 20px;
+				font-size: 36px;
+				line-height: 39px;
+			}
+
+			.subtitle {
+				margin-bottom: 30px;
+				font-size: 20px;
+				line-height: 23px;
+				text-align: center;
+			}
+
+			.desc {
+				display: none;
+			}
+
+			.shop {
+				flex-direction: column;
+
+				.prices {
+					margin-right: 0;
+					margin-bottom: 15px;
+				}
+
+				.btn-add-to-cart {
+					padding-left: 91px;
+					padding-right: 91px;
+				}
+			}
+		}
+
+		.images {
+			position: relative;
+			left: initial;
+			width: calc(100vw - 10px);
+			height: auto;
+			min-height: 320px;
+
+			&:not(.slick-slider) {
+				margin-top: 20px;
+
+				.image-wrapper {
+					width: 242px;
+					margin-right: 10px;
+				}
+			}
+
+			.slick-slide {
+				margin-left: 5px;
+				margin-right: 5px;
+
+				img {
+					width: 242px;
+					height: 247px;
+					transform: initial;
+				}
+
+				&.slick-current {
+					img {
+						transform: initial;
+						animation: none;
+					}
+				}
+			}
+
+			.slick-dots {
+				position: relative;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				top: initial;
+				bottom: initial;
+				left: initial;
+				justify-content: center;
+			}
+		}
+	}
+}

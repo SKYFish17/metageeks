@@ -1,0 +1,18 @@
+// @layer base {
+// // Custom base styles if necessary.
+// // See https://tailwindcss.com/docs/adding-base-styles.
+// }
+
+//----------------------------------------
+// Theme Styles.
+//----------------------------------------
+@import 'global/index.scss';
+@import 'template-tags/index.scss';
+@import 'blocks/index.scss';
+@import 'templates/index.scss';
+@import 'wordpress-global/index.scss';
+@import 'woocommerce/index.scss';
+@import 'vendor/index.scss';
+
+// Vendor
+@import '../../node_modules/simplebar/dist/simplebar.css';

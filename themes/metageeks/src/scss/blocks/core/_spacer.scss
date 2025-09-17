@@ -1,0 +1,13 @@
+//----------------------------------------
+// Spacer - Core Gutenberg Block
+//----------------------------------------
+
+.wp-block-spacer {
+	@apply container;
+}
+
+.wp-block-separator {
+	border-bottom: none;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}

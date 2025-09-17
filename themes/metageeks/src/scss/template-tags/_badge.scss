@@ -1,0 +1,53 @@
+.badge {
+	@include indent-reset();
+	padding: 4px 12px 4px 4px;
+	display: flex;
+	align-items: stretch;
+	font-family: Ubuntu, sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	color: $dark_steel_gray;
+	background-color: $silver_white;
+	border-radius: 16px;
+
+	&__status {
+		flex-shrink: 0;
+		margin-right: 8px;
+		padding: 2px 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 500;
+		background-color: #fff;
+		border-radius: 16px;
+	}
+
+	&__value {
+		font-weight: 700;
+	}
+
+	&_feature {
+		color: $accent;
+		background-color: rgba(129, 50, 74, 0.1);
+	}
+
+	&_warning {
+		color: #B54708;
+		background-color: #FFFAEB;
+	}
+
+	&_error {
+		color: #B42318;
+		background-color: #FEF3F2;
+	}
+
+	&_success {
+		color: #027A48;
+		background-color: #ECFDF3;
+	}
+
+	&_gray {
+		color: $accent;
+		background-color: rgba(129, 50, 74, 0.1);
+	}
+}

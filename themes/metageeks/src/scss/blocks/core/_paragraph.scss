@@ -1,0 +1,13 @@
+.wp-block-paragraph {
+	margin: 0 auto;
+
+	a {
+		color: $accent;
+		text-decoration: underline;
+
+		&:hover,
+		&:focus {
+			color: $accent_hover;
+		}
+	}
+}

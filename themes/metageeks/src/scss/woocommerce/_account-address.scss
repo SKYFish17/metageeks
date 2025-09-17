@@ -1,0 +1,39 @@
+//----------------------------------------
+// Woocommerce My-Account Address Styles
+//----------------------------------------
+
+.metageeks-address {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+
+	@media (max-width: $mobile) {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+
+		&__item {
+			margin-bottom: 40px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__name {
+		font-size: 20px;
+		line-height: 23px;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+
+	&__summary {
+		color: $dark_steel_gray;
+		font-style: normal;
+		margin-bottom: 10px;
+	}
+
+	&__edit {
+		color: $accent;
+		font-size: 14px;
+		line-height: 16px;
+	}
+}

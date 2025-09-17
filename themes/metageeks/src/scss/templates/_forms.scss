@@ -1,0 +1,242 @@
+//----------------------------------------
+// MetaGeeks form styles
+//----------------------------------------
+
+.mg-button,
+#rd_reward_points {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 38px;
+	padding: 0 16px;
+	background: $accent;
+	border-radius: 8px;
+	font-weight: 500;
+	color: #fff !important;
+	transition: background .2s ease-in-out;
+	outline: 0;
+	text-decoration: none;
+
+	&:hover {
+		background: $accent_hover;
+	}
+}
+
+
+.mg-form {
+
+	.gfield_required {
+		display: none !important;
+	}
+
+	&__group {
+		margin-top: 30px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&-title {
+			font-size: 20px;
+			line-height: 23px;
+			font-weight: 700;
+			margin-bottom: 20px;
+		}
+
+		&-fields {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 15px 19px;
+
+			@media (max-width: $mobile) {
+				grid-template-columns: repeat(1, minmax(0, 1fr));
+			}
+		}
+
+	}
+
+	&__field {
+		margin-bottom: 0;
+
+		label {
+			font-size: 16px !important;
+			line-height: 1.4;
+			font-weight: 400 !important;
+			margin-bottom: 6px !important;
+		}
+
+		textarea {
+			width: 100% !important;
+			border: 1px solid $stroke;
+			border-radius: 8px !important;
+			background: #fff;
+			padding: 10px 14px !important;
+			outline: 0;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		input[type="tel"],
+		select {
+			width: 100%;
+			height: 42px;
+			border: 1px solid $stroke;
+			border-radius: 8px;
+			background: #fff;
+			padding: 10px 14px;
+			outline: 0;
+
+			&:focus {
+				border: 1px solid $dark_gray !important;
+			}
+		}
+
+		.select2-selection {
+			width: 100%;
+			height: 42px;
+			background: #fff;
+			border: 1px solid $stroke;
+			border-radius: 8px;
+			outline: 0;
+
+			&__rendered {
+				line-height: 40px !important; /* stylelint-disable-line declaration-no-important */
+				padding: 0 48px 0 14px !important; /* stylelint-disable-line declaration-no-important */
+			}
+
+			&__arrow {
+				margin: 10px 14px 0 0;
+				background: url(../images/icons/arrow-down.svg) no-repeat;
+				background-position: center;
+				width: 20px !important; /* stylelint-disable-line declaration-no-important */
+				height: 20px !important; /* stylelint-disable-line declaration-no-important */
+
+				b {
+					display: none;
+				}
+			}
+		}
+
+		&.desktop-col-span-2 {
+			grid-column: span 2 / span 2;
+		}
+
+		@media (max-width: $mobile) {
+			&.mobile-col-span-1 {
+				grid-column: span 1 / span 1;
+			}
+		}
+	}
+
+	&__checkbox {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 14px;
+		line-height: 16px;
+		margin-bottom: 0;
+		font-weight: 400;
+		cursor: pointer;
+
+		input {
+			display: none;
+
+			&:checked + span {
+				position: relative;
+				background: $accent;
+				border: 1px solid $accent;
+
+				&::before {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background: url(../images/check.svg) no-repeat;
+					background-size: 14px;
+					background-position: center;
+					width: 18px;
+					height: 18px;
+					filter: brightness(0) invert(1);
+				}
+			}
+		}
+
+		.checkbox {
+			width: 20px;
+			height: 20px;
+			background: #fff;
+			border: 1px solid $stroke;
+			border-radius: 6px;
+			margin-right: 4px;
+			outline: 0;
+		}
+	}
+
+	.gform_footer input[type="submit"],
+	&__button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		width: 100%;
+		height: 44px;
+		padding: 0;
+		background: $accent;
+		border-radius: 8px;
+		font-weight: 500;
+		color: #fff;
+		transition: background .2s ease-in-out;
+		outline: 0;
+		cursor: pointer;
+
+		&:hover {
+			background: $accent_hover;
+		}
+	}
+
+	.gform_footer input[type="submit"] {
+		width: calc(50% - 8px);
+
+		@media (max-width: $mobile) {
+			width: 100%;
+		}
+	}
+
+}
+
+
+// Gravity
+.mg-form_wrapper {
+
+	.gform_title {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 23px;
+		margin-bottom: 20px;
+	}
+
+	.gform_description {
+		display: block;
+		font-size: 16px;
+		line-height: 1.4;
+		margin-bottom: 20px;
+		color: $dark_steel_gray;
+	}
+
+}
+
+
+// Select 2
+.select2-dropdown {
+	border: 1px solid $stroke;
+	border-radius: 8px;
+}
+
+.select2-search {
+	&__field {
+		background: #fff !important; /* stylelint-disable-line declaration-no-important */
+		border: 1px solid $stroke !important; /* stylelint-disable-line declaration-no-important */
+	}
+}

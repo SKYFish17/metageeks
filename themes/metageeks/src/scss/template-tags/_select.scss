@@ -1,0 +1,33 @@
+.select {
+	justify-content: space-between;
+	align-items: center;
+	padding: 7px 14px;
+	border: 1px solid #D3D3D3;
+	box-sizing: border-box;
+	border-radius: 8px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	&::-ms-expand {
+		display: none;
+	}
+
+	&__wrapper {
+		position: relative;
+
+		&::after {
+			content: '';
+			display: inline-block;
+			background: url(../images/icons/arrow-down.svg) no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			right: 14px;
+			top: calc(50% - 10px);
+			pointer-events: none;
+		}
+	}
+}

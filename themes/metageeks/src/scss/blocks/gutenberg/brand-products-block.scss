@@ -1,0 +1,47 @@
+//----------------------------------------
+// Brand Products block styles
+//----------------------------------------
+
+.brand-products-block {
+
+	&__switches {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 20px;
+
+		@media (max-width: $mobile) {
+			margin-bottom: 5px;
+		}
+
+		&-item {
+			font-family: "hwt_artz", sans-serif;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 19px;
+			color: $dark_steel_gray;
+			padding: 12px;
+			margin-right: 15px;
+			margin-bottom: 10px;
+			background: $light_gray;
+			text-transform: uppercase;
+			border-radius: 8px;
+			outline: 0;
+			white-space: nowrap;
+
+			@media (max-width: $mobile) {
+				margin-right: 10px;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&.active {
+				background: $accent;
+				color: #fff;
+			}
+		}
+
+	}
+
+}

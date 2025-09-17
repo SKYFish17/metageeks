@@ -1,0 +1,183 @@
+//----------------------------------------
+// Woocommerce My-Account Login Styles
+//----------------------------------------
+
+body.woocommerce-account:not(.logged-in) {
+
+	.site-header,
+	.site-footer {
+		display: none !important; /* stylelint-disable-line declaration-no-important */
+	}
+
+	.site-main {
+		background: $silver_white;
+		min-height: 100vh;
+	}
+
+}
+
+
+.metageeks-login {
+
+	&__wrapper {
+		max-width: 470px;
+		margin: 0 auto;
+		padding-top: 90px;
+		padding-bottom: 115px;
+		padding-left: 15px;
+		padding-right: 15px;
+
+		@media (max-width: $mobile) {
+			padding-top: 48px;
+			padding-bottom: 50px;
+		}
+	}
+
+	&__logo {
+		margin-bottom: 24px;
+
+		a {
+			display: block;
+			text-align: center;
+		}
+
+		img {
+			display: inline-block;
+			max-width: 214px;
+		}
+	}
+
+	&__form {
+
+		&-wrapper {
+			margin-top: 32px;
+			padding: 32px 40px;
+			background: #fff;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			border-radius: 8px;
+
+			@media (max-width: $mobile) {
+				padding: 0;
+				box-shadow: none;
+				background: transparent;
+			}
+		}
+
+		&-title {
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 28px;
+			text-align: center;
+
+			@media (max-width: $mobile) {
+				margin-bottom: 24px;
+			}
+		}
+
+		&-subtitle {
+			margin-top: 12px;
+			text-align: center;
+			color: $dark_steel_gray;
+
+		}
+
+		&-controls {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&-forgot {
+			font-size: 14px;
+			line-height: 16px;
+			color: $steel_gray;
+			text-decoration: none;
+		}
+
+		.woocommerce-privacy-policy-text {
+			display: none;
+		}
+
+		p {
+			margin-bottom: 20px;
+		}
+
+		.woo-slp {
+
+			&-login-wrapper {
+				width: 100%;
+				margin: 0 0 12px 0;
+			}
+
+			&-social-btn {
+				margin: 0 !important;
+				display: inline-flex !important;
+				align-items: center;
+				justify-content: center;
+				text-align: center !important;
+				max-width: 100% !important;
+				width: 100%;
+				padding: 10px !important;
+				background: #fff;
+				border: 1px solid $stroke !important;
+				border-radius: 8px !important;
+				box-shadow: none !important;
+				font-weight: 500 !important;
+				font-size: 16px !important;
+				line-height: 1.4 !important;
+				color: $dark_steel_gray !important;
+			}
+
+			&-icon {
+				position: static;
+				height: 24px;
+				width: 24px;
+				margin-right: 10px;
+				background-size: 100%;
+			}
+
+			&-gp-icon {
+				background-image: url(../images/google-social-login.svg);
+			}
+
+			&-fb-icon {
+				background-image: url(../images/facebook-social-login.svg);
+			}
+
+			&-amz-icon {
+				background-image: url(../images/amazon-social-login.svg);
+			}
+
+		}
+
+		&-back {
+			margin: 34px auto 0 auto;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			color: $steel_gray;
+			text-decoration: none;
+
+			svg {
+				margin-right: 12px;
+			}
+		}
+	}
+
+	&__switch {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 32px;
+		text-align: center;
+
+		&-button {
+			margin-left: 5px;
+			color: $accent;
+			font-weight: 700;
+		}
+	}
+
+}

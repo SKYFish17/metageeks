@@ -1,0 +1,18 @@
+.modal-background {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(29, 31, 34, 0.3);
+
+	&.active {
+		display: block;
+	}
+
+	&.second-modal-active {
+		z-index: 12;
+	}
+}

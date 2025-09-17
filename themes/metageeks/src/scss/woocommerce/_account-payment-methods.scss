@@ -1,0 +1,61 @@
+//----------------------------------------
+// Woocommerce My-Account Payment Methods Styles
+//----------------------------------------
+
+.metageeks-payment-methods {
+
+	.account-payment-methods-table {
+		th {
+			text-align: left;
+			font-weight: 400;
+		}
+
+		tbody {
+			td {
+				color: $steel_gray;
+				font-size: 14px;
+				line-height: 16px;
+				padding: 8px 40px 8px 0;
+
+				@media (max-width: 900px) {
+					padding: 8px 16px 8px 0;
+				}
+			}
+		}
+
+		.payment-method-actions {
+			a {
+				padding: 8px;
+
+				@media (max-width: 900px) {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.wc-payment-form {
+		label {
+			font-size: 16px;
+			line-height: 1.4;
+			font-weight: 400;
+			margin-bottom: 6px;
+		}
+	}
+
+	.wc-stripe-elements-field {
+		width: 100%;
+		height: 42px;
+		border: 1px solid $stroke;
+		border-radius: 8px;
+		background: #fff;
+		padding: 10px 14px;
+		outline: 0;
+		margin: 0 0 15px 0;
+
+		&:focus {
+			border: 1px solid $dark_gray;
+		}
+	}
+
+}

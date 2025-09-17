@@ -1,0 +1,226 @@
+//----------------------------------------
+// Woocommerce My-Account Points Styles
+//----------------------------------------
+
+.metageeks-points {
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__description {
+		margin-bottom: 30px;
+		color: $dark_steel_gray;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 25px;
+		margin-bottom: 30px;
+
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+		}
+	}
+
+	&-card {
+		display: flex;
+		flex-direction: column;
+		background: $silver_white;
+		border: 1px solid $stroke;
+		border-radius: 10px;
+		padding: 20px 25px 25px 25px;
+		text-align: center;
+
+		&__number {
+			font-weight: 500;
+			font-size: 56px;
+			line-height: 64px;
+			color: $accent;
+			margin-bottom: 11px;
+		}
+
+		&__title {
+			font-weight: 500;
+		}
+
+		&__subtitle {
+			font-size: 14px;
+			color: $steel_gray;
+		}
+
+		&__description {
+			margin-top: 21px;
+			margin-bottom: 20px;
+			color: $dark_steel_gray;
+		}
+
+		&__button {
+			height: 44px;
+			width: 100%;
+			margin-top: auto;
+		}
+
+	}
+
+
+	.mwb_wpr_each_section {
+		background: $silver_white;
+		border: 1px solid $stroke;
+		border-radius: 10px;
+		padding: 20px 25px 25px 25px;
+		box-shadow: none;
+
+		label {
+			font-size: 16px;
+			line-height: 1.4;
+			font-weight: 400;
+			margin-bottom: 6px;
+		}
+
+		input[type="number"] {
+			min-width: 320px;
+			height: 42px;
+			border: 1px solid $stroke;
+			border-radius: 8px;
+			background: #fff;
+			padding: 10px 14px;
+			outline: 0;
+
+			@media (max-width: $mobile) {
+				min-width: auto;
+				width: 100% !important;
+			}
+
+			&:focus {
+				border: 1px solid $dark_gray !important;
+			}
+		}
+
+		input[type="button"] {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			height: 42px;
+			padding: 0 16px;
+			background: $accent;
+			border-radius: 8px;
+			font-weight: 500;
+			color: #fff !important;
+			transition: background .2s ease-in-out;
+			outline: 0;
+			text-decoration: none;
+			cursor: pointer;
+
+			&:hover {
+				background: $accent_hover;
+			}
+		}
+	}
+
+
+	.points_log {
+		background: #fff;
+		border: 1px solid $stroke;
+		border-radius: 10px;
+		padding: 16px;
+		box-shadow: none;
+
+		table {
+			width: 100%;
+
+			th, td {
+				padding: 5px;
+			}
+
+			th {
+				text-align: left;
+				font-weight: 500;
+				border-bottom: 1px solid $stroke;
+			}
+
+			td {
+				color: $dark_steel_gray;
+				border-bottom: 1px solid $stroke;
+			}
+
+			tr {
+				&:last-child {
+					td {
+						border-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// Points Log
+.metageeks-account__content > h2 {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	margin-bottom: 20px;
+}
+
+.mwb_wpr_common_slider {
+	border-radius: 8px;
+	background: $silver_white;
+	padding: 10px 20px;
+	font-size: 16px;
+	color: $text_main;
+}
+
+.mwb_wpr_view_log_notice.mwb_wpr_common_slider .mwb_wpr_open_toggle {
+	right: 35px;
+}
+
+.mwb_wpr_common_table {
+	border-collapse: collapse;
+
+	th,
+	td {
+		padding: 5px 10px !important;
+		border: 1px solid $stroke;
+	}
+
+	th {
+		text-align: left;
+		border-top: 0;
+	}
+
+	td:first-child,
+	th:first-child {
+		border-left: 0;
+	}
+
+	td:last-child,
+	th:last-child {
+		border-right: 0;
+	}
+
+	tbody {
+		tr:last-child {
+			td {
+				border-bottom: 0;
+			}
+		}
+	}
+}
+
+.mwb_wpr_total_points {
+	margin: 30px 0;
+
+	h4 {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 23px;
+	}
+
+	td:nth-child(2) {
+		color: $accent;
+	}
+}

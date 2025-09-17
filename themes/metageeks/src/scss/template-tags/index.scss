@@ -1,0 +1,30 @@
+//----------------------------------------
+// Template Tag Styles
+//
+// Import partials for functions in template-tags.php.
+//----------------------------------------
+
+@import 'forms';
+@import 'menus';
+@import 'mobile-menus';
+@import 'modals';
+@import 'modal-auth';
+@import 'modal-cart';
+@import 'modal_product_filters';
+@import 'modal-product-remove';
+@import 'modal-background';
+@import 'off-canvas';
+@import 'svg-sprite-wrapper';
+@import 'btn';
+@import 'breadcrumb';
+@import 'product';
+@import 'product-qty-limit';
+@import 'product-status-pre-order';
+@import 'woocommerce-form-coupon';
+@import 'badge';
+@import 'select';
+@import 'radio';
+@import 'filters';
+@import 'search-form';
+@import 'modal-search';
+@import 'product-slider';

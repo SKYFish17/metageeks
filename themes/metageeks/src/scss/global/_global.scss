@@ -1,0 +1,135 @@
+//--------------------------------------------------------------
+// Global Resets/Overrides
+//--------------------------------------------------------------
+*,
+::after,
+::before {
+	@apply box-border break-words;
+
+	word-wrap: break-word;
+}
+
+//-----------------------------------------
+// Admin Overrides
+//-----------------------------------------
+.block-editor-writing-flow {
+	@apply text-base leading-normal;
+}
+
+//-----------------------------------------
+// Theme Elements
+//-----------------------------------------
+html {
+	font-family: Ubuntu, sans-serif;
+	font-weight: 400;
+	color: $text_main;
+	overflow-x: hidden;
+}
+
+body {
+	overflow-x: hidden;
+
+	&.modal-active {
+		overflow: hidden;
+	}
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.admin-bar {
+	.modal-basket,
+	.modal-product-filters {
+		.modal-inner {
+			margin-top: 32px;
+		}
+	}
+
+	&.woocommerce-cart {
+		.cart-page {
+			&-notices {
+				top: calc(230px + 32px);
+			}
+		}
+	}
+
+	@media (max-width: 1330px) {
+		&.woocommerce-cart {
+			.cart-page {
+				&-notices {
+					top: calc(286px + 32px);
+					right: 15px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 899px) {
+		&.woocommerce-cart {
+			.cart-page {
+				&-notices {
+					top: calc(143px + 46px);
+					right: 10px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 782px) {
+		.modal-basket,
+		.modal-product-filters {
+			.modal-inner {
+				margin-top: 46px;
+			}
+		}
+	}
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 100%;
+	max-width: 1330px;
+}
+
+@media (max-width: $mobile) {
+	.container {
+		max-width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.mg-h1 {
+	@include indent-reset();
+	font-family: 'hwt_artz', sans-serif;
+	font-size: 36px;
+	line-height: 39px;
+	color: $text_main;
+
+	&-center {
+		text-align: center;
+	}
+
+	@media (max-width: $mobile) {
+		font-size: 24px;
+		line-height: 26px;
+	}
+}
+
+.wp-block-button__link {
+	font-family: Ubuntu, sans-serif;
+	font-weight: 500;
+}

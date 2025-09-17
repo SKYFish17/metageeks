@@ -1,0 +1,116 @@
+//--------------------------------------------------------------
+// Mobile Menus
+//--------------------------------------------------------------
+.mobile-menu {
+	@include list-reset();
+
+	li {
+		border-bottom: 1px solid $light_gray;
+
+		a {
+			padding-top: 14.5px;
+			padding-bottom: 14.5px;
+			display: flex;
+			align-items: center;
+			font-size: 16px;
+			line-height: 1.4;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			.menu-item-icon {
+				margin-right: 10px;
+				order: -1;
+			}
+		}
+	}
+
+	.caret-down {
+		background: url( ../images/icons/caret-down-mobile.svg ) 50% 50% no-repeat;
+	}
+
+	.sub-menu {
+		@apply hidden;
+		margin-left: 32px;
+		margin-bottom: 0;
+
+		&.is-visible {
+			@apply block opacity-100 visible;
+		}
+
+		li {
+			@include indent-reset();
+			margin-bottom: 15px;
+			border-bottom: none;
+
+			a {
+				@include indent-reset();
+				text-transform: initial;
+			}
+		}
+	}
+
+	.menu-item-has-children {
+		&.now-visible {
+			max-height: 8000px;
+
+			.parent-indicator {
+				@apply rotate-180;
+			}
+
+			> a {
+				font-weight: 700;
+				color: $accent;
+			}
+		}
+
+		.menu-item-has-children {
+			&:last-of-type {
+				.menu-item-has-children.is-visible {
+					@apply mb-0;
+				}
+			}
+
+			.parent-indicator {
+				@apply rotate-0;
+			}
+
+			&.is-visible {
+				&:last-of-type {
+					@apply mb-0;
+				}
+
+				.parent-indicator {
+					@apply rotate-180;
+				}
+			}
+
+			.menu-item-has-children {
+				.parent-indicator {
+					@apply rotate-0;
+				}
+
+				&.is-visible {
+					.parent-indicator {
+						@apply rotate-180;
+					}
+				}
+			}
+		}
+	}
+
+	.parent-indicator {
+		@apply inline-block relative;
+
+		float: unset;
+		height: 24px;
+		width: 24px;
+		top: 0;
+		display: flex;
+		flex-grow: 1;
+		background-position: center left;
+
+		&.caret-down {
+			margin-left: 10px;
+		}
+	}
+}

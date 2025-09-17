@@ -1,0 +1,45 @@
+.modal-product-filters {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(29, 31, 34, 0.3);
+
+	&.active {
+		display: block;
+	}
+
+	.modal-inner {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 60px 68px 60px 19px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 338px;
+		height: 100%;
+		font-family: Ubuntu, sans-serif;
+		background-color: $white;
+
+		.title {
+			@include indent-reset();
+			margin-bottom: 20px;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 28px;
+		}
+
+		.close {
+			position: absolute;
+			top: 7px;
+			right: 7px;
+			margin-top: 0;
+			background-color: #fff;
+		}
+	}
+}

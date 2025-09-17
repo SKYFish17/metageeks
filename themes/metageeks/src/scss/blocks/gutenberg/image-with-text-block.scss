@@ -1,0 +1,140 @@
+.image-with-text-block {
+	width: 100vw;
+	position: relative;
+	margin-left: -50vw;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	height: auto;
+	left: 50%;
+	background-color: $white;
+	z-index: 1;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1134px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin: 0 auto;
+		z-index: 2;
+
+		@media (max-width: $mobile) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__background-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+
+		&--form-narrows {
+			clip-path: polygon(0 0, 100% 5%, 100% 95%, 0% 100%);
+			@media (max-width: $mobile) {
+				clip-path: polygon(0 0, 100% 3%, 100% 97%, 0% 100%);
+			}
+		}
+
+		&--form-extends {
+			clip-path: polygon(0 0, 100% 5%, 100% 95%, 0% 100%);
+			transform: scaleX(-1);
+			@media (max-width: $mobile) {
+				clip-path: polygon(0 0, 100% 3%, 100% 97%, 0% 100%);
+			}
+		}
+	}
+
+	&__image {
+		width: 54%;
+		border-radius: 4px;
+		background-color: $light_gray;
+
+		@media (max-width: $mobile) {
+			width: 100%;
+			margin-bottom: 40px;
+		}
+
+		&--position-left {
+			order: 1;
+		}
+
+		&--position-right {
+			order: 2;
+			@media (max-width: $mobile) {
+				order: 1;
+			}
+		}
+	}
+
+	&__content {
+		width: 46%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+
+		@media (max-width: $mobile) {
+			width: 100%;
+			align-items: center;
+		}
+
+		&--position-left {
+			padding-left: 93px;
+			order: 2;
+			@media (max-width: $mobile) {
+				padding-left: 0;
+			}
+		}
+
+		&--position-right {
+			padding-right: 93px;
+			order: 1;
+			@media (max-width: $mobile) {
+				padding-right: 0;
+				order: 2;
+			}
+		}
+
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 28px;
+		margin-bottom: 25px;
+
+		@media (max-width: $mobile) {
+			text-align: center;
+		}
+
+		&--theme-dark {
+			color: $white;
+		}
+
+		&--theme-light {
+			color: $text_main;
+		}
+	}
+
+	&__description {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+
+		@media (max-width: $mobile) {
+			text-align: center;
+		}
+
+		&--theme-dark {
+			color: $white;
+		}
+
+		&--theme-light {
+			color: $dark_steel_gray;
+		}
+	}
+}

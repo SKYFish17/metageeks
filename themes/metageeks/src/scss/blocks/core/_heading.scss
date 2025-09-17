@@ -1,0 +1,46 @@
+//----------------------------------------
+// Heading - Core Gutenberg Block
+//----------------------------------------
+
+
+.wp-block-heading {
+	font-weight: 500;
+
+	h1 {
+		@apply mb-32;
+	}
+
+	h5 {
+		@apply mb-12;
+	}
+
+	h6 {
+		@apply mb-8;
+	}
+}
+
+h2.wp-block-heading {
+	margin-top: 49px;
+	margin-bottom: 24px;
+	font-size: 36px;
+	line-height: 41px;
+
+	@media (max-width: $mobile) {
+		font-size: 24px;
+		line-height: 28px;
+	}
+}
+
+h3.wp-block-heading {
+	margin-top: 47px;
+	margin-bottom: 16px;
+	font-size: 24px;
+	line-height: 28px;
+}
+
+h4.wp-block-heading {
+	margin-top: 40px;
+	margin-bottom: 16px;
+	font-size: 20px;
+	line-height: 24px;
+}

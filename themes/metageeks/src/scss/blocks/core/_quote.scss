@@ -1,0 +1,26 @@
+//----------------------------------------
+// Quote - Core Gutenberg Block
+//----------------------------------------
+
+.wp-block-quote {
+	padding-left: 20px;
+	margin-top: 48px;
+	margin-bottom: 48px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border-left: 2px solid $accent;
+
+	p {
+		font-style: italic;
+		font-size: 20px;
+		font-weight: 400;
+		@apply mb-16;
+	}
+
+	cite {
+		display: block;
+		margin-top: 32px;
+		font-size: 16px;
+		color: $steel_gray;
+	}
+}

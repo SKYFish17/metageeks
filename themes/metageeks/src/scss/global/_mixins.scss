@@ -1,0 +1,18 @@
+@use "sass:math";
+
+@mixin indent-reset() {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin list-reset() {
+	@include indent-reset();
+	list-style: none;
+}
+
+@function calc-fluid($f-min, $f-max, $w-min: 375, $w-max: 1920) {
+	$k: math.div($f-max - $f-min, $w-max - $w-min);
+	$b: $f-min - $k * $w-min;
+	$b: $b * 1px;
+	@return calc( #{$k} * 100vw + #{$b} );
+}

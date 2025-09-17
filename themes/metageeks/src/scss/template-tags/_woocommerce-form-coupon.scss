@@ -1,0 +1,32 @@
+.woocommerce-form-coupon {
+	max-width: 320px;
+	width: 100%;
+
+	&__row {
+		@include indent-reset();
+		display: flex;
+	}
+
+	&__input {
+		@include indent-reset();
+		padding: 10px 14px !important;
+		width: 100%;
+		font-size: 16px;
+		line-height: 1.4;
+		border: 1px solid $stroke;
+		border-radius: 8px 0 0 8px;
+		background-color: #fff !important;
+		outline: 0;
+	}
+
+	&__btn {
+		@include indent-reset();
+		padding: 10px 12px 10px 14px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.4;
+		color: #fff;
+		background: $accent;
+		border-radius: 0 8px 8px 0;
+	}
+}

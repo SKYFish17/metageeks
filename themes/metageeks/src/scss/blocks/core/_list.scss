@@ -1,0 +1,35 @@
+//----------------------------------------
+// List - Core Gutenberg Block
+//----------------------------------------
+
+ul.wp-block-list,
+.wp-editor.mce-content-body ul {
+	&:not(.menu, .sub-menu, .mobile-menu, .list-none) {
+		@apply mb-0 list-disc list-inside;
+	}
+}
+
+ol.wp-block-list,
+.wp-editor.mce-content-body ol {
+	@apply mb-0 list-decimal list-inside;
+}
+
+.wp-editor.mce-content-body ul,
+.wp-editor.mce-content-body ol {
+	@apply mb-2;
+}
+
+ul.wp-block-list,
+ol.wp-block-list,
+.wp-editor.mce-content-body ul,
+.wp-editor.mce-content-body ol {
+	a {
+		color: $accent;
+		text-decoration: underline;
+
+		&:hover,
+		&:focus {
+			color: $accent_hover;
+		}
+	}
+}

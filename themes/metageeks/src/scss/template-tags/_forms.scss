@@ -1,0 +1,285 @@
+//--------------------------------------------------------------
+// Forms
+//--------------------------------------------------------------
+textarea,
+input:not(.button, [type="file"]) {
+	@apply bg-black bg-opacity-10 p-8;
+}
+
+label {
+	@apply block font-semibold mb-16;
+}
+
+//-----------------------------------------
+// Search Form
+//-----------------------------------------
+.search-form {
+	@apply mt-6;
+
+	.search-field {
+		@apply bg-black bg-opacity-10 text-black p-16 rounded-lg;
+	}
+
+	.button {
+		@apply bg-black bg-opacity-25 text-black p-16 rounded-lg text-center no-underline;
+	}
+}
+
+// Gravity forms
+.gform {
+	&_wrapper.gravity-theme {
+		.gfield {
+
+			textarea,
+			input:not(.button, [type="file"]),
+			input[type="text"],
+			input[type="url"],
+			input[type="tel"],
+			input[type="phone"],
+			select {
+				padding: 4px 14px;
+				font-size: 16px;
+				line-height: 22px;
+				background-color: $white;
+				border: 1px solid $stroke;
+				border-radius: 8px;
+				appearance: none;
+				min-height: 42px;
+			}
+
+			select {
+				line-height: 28px;
+			}
+
+			label {
+				display: block;
+				color: $text_main;
+				margin-bottom: 6px;
+				font-size: 16px;
+				line-height: 22px;
+				font-weight: 400;
+			}
+		}
+
+		.ginput_container_select {
+			position: relative;
+
+			&::after {
+				position: absolute;
+				top: calc(50% - 10px);
+				right: 11px;
+				content: '';
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 20px;
+				height: 20px;
+				background: url(../images/icons/select-down.svg) center center no-repeat;
+				cursor: pointer;
+				pointer-events: none;
+			}
+		}
+	}
+
+	// Footer subscribe form
+	&-subscribe {
+		&_wrapper {
+			input:not(.button) {
+				border-radius: 0;
+			}
+		}
+	}
+
+	// Common styles for the forms on pages
+	&_wrapper.page-form {
+		&_wrapper.gravity-theme {
+			max-width: 480px;
+			margin: 0 auto;
+
+			.gform_title {
+				font-weight: 600;
+				font-size: 36px;
+				line-height: 41px;
+				text-align: center;
+				margin-bottom: 20px;
+
+				@media (max-width: $mobile-xs) {
+					font-size: 24px;
+					line-height: 28px;
+					margin-bottom: 16px;
+				}
+			}
+
+			.gform_description {
+				display: block;
+				font-size: 18px;
+				line-height: 21px;
+				text-align: center;
+				color: $steel_gray;
+				margin-bottom: 43px;
+			}
+
+			.gform_required_legend {
+				display: none;
+			}
+
+			.gfield {
+				margin-bottom: 10px;
+
+				textarea.small {
+					height: 120px;
+				}
+
+				@media (max-width: $mobile-xs) {
+					margin-bottom: 6px;
+				}
+
+				&.gfield--width-half:nth-of-type(1n) {
+					padding-right: 10px;
+
+					@media (max-width: $mobile-xs) {
+						padding-right: 0;
+					}
+				}
+
+				&.gfield--width-half:nth-of-type(2n) {
+					padding-left: 10px;
+
+					@media (max-width: $mobile-xs) {
+						padding-left: 0;
+					}
+				}
+			}
+
+			.ginput_complex {
+				.name_first {
+					@media (max-width: $mobile-xs) {
+						margin-bottom: 18px;
+					}
+				}
+
+				.name_last {
+					@media (max-width: $mobile-xs) {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			.gfield_label,
+			.ginput_complex label {
+				display: block;
+				color: $text_main;
+				margin-bottom: 6px;
+				font-size: 16px;
+				line-height: 22px;
+				font-weight: 400;
+			}
+
+			.gfield_required {
+				margin-bottom: 0;
+				font-size: 16px;
+			}
+
+			.ginput_complex:not(.ginput_container_address) span:not([style*="display:none"]):not(.ginput_full) {
+				padding-right: 16px;
+
+				@media (max-width: $mobile-xs) {
+					padding-right: 0;
+				}
+			}
+
+			.ginput_complex:not(.ginput_container_address) span:not([style*="display:none"]):not(.ginput_full)~span:not(.ginput_full) {
+				padding-left: 16px;
+
+				@media (max-width: $mobile-xs) {
+					padding-left: 0;
+				}
+			}
+
+			.gform_fileupload_rules {
+				display: none;
+			}
+
+			input[type="file"] {
+				span {
+					display: block;
+				}
+			}
+
+			input[type="file"]::file-selector-button {
+				padding: 8px 20px;
+				background-color: $white;
+				border: 1px solid $accent;
+				color: $accent;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 22px;
+				border-radius: 8px;
+				cursor: pointer;
+
+				@media (max-width: $mobile-xs) {
+					margin-right: 10px;
+					width: 45%;
+				}
+
+				&:hover,
+				&:focus {
+					background-color: $accent;
+					color: $white;
+				}
+			}
+
+			.validation_message {
+				padding: 0;
+				background-color: transparent;
+				border: none;
+				color: $red;
+				font-size: 14px;
+				line-height: 16px;
+			}
+
+			.gform_footer {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				.btn {
+					padding: 11px 20px;
+					font-weight: 500;
+
+					@media (max-width: $mobile-xs) {
+						width: 100%;
+					}
+				}
+			}
+
+			.gform_confirmation_message {
+				text-align: center;
+			}
+		}
+	}
+
+	// Apply for a job form
+	&_wrapper.apply-job-form {
+		&_wrapper.gravity-theme {
+			margin-top: 44px;
+
+			@media (max-width: $mobile-xs) {
+				margin-top: 35px;
+			}
+		}
+	}
+
+	// Contact us form
+	&_wrapper.contact-us-form {
+		&_wrapper.gravity-theme {
+			.gform_footer {
+				padding: 5px 0;
+
+				.btn {
+					padding: 13px 48px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,137 @@
+.btn {
+	@include indent-reset();
+	display: inline-block;
+	padding: 13px 54px;
+	font-family: Ubuntu, sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 18px;
+	text-align: center;
+	color: $text_main;
+	background-color: #fff;
+	border-radius: 8px;
+	text-decoration: none;
+
+	&-red {
+		color: $white;
+		background-color: $accent;
+		transition: linear $normal;
+
+		&:hover {
+			background-color: $accent_hover;
+			transition: linear $normal;
+		}
+	}
+
+	&-gray {
+		background-color: $stroke;
+		transition: linear $normal;
+
+		&:hover {
+			background-color: $stroke_dark;
+			transition: linear $normal;
+		}
+	}
+
+	&-add-to-cart {
+		padding: 13px 29px;
+		display: flex;
+		align-items: center;
+
+		svg {
+			margin-right: 11px;
+			fill: none;
+			stroke: #fff;
+		}
+	}
+
+	&-cart {
+		padding: 6px 16px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		font-size: 0;
+		line-height: 0;
+
+		&:hover {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 18px;
+
+			.icon {
+				margin-left: 7px;
+			}
+		}
+	}
+
+	&-product-table {
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+		line-height: 16px;
+		color: $dark_gray;
+		transition: $normal linear;
+
+		.icon {
+			margin-right: 5px;
+			width: 20px;
+			height: 20px;
+			fill: $dark_gray;
+			transition: $normal linear;
+		}
+
+		&:hover {
+			color: $text_main;
+			transition: $normal linear;
+
+			.icon {
+				fill: $text_main;
+				transition: $normal linear;
+			}
+		}
+	}
+
+	&-cart-control {
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: $accent;
+
+		.icon {
+			margin-right: 5px;
+			width: 24px;
+			height: 24px;
+			fill: $accent;
+		}
+	}
+
+	&.disabled {
+		color: $text_main;
+		background-color: $light_gray;
+		cursor: not-allowed;
+	}
+
+	&-outline {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 11px 17px;
+		background-color: $white;
+		color: $text_main;
+		border: 1px solid #8E8F90;
+		box-sizing: border-box;
+		border-radius: 8px;
+
+		&:hover,
+		&:focus {
+			background-color: $light_gray;
+		}
+	}
+
+	&__icon {
+		display: inline-block;
+		margin-right: 10px;
+	}
+}

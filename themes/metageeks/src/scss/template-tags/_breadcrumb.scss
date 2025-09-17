@@ -1,0 +1,53 @@
+.breadcrumb {
+	justify-self: center;
+	margin-top: 18.5px;
+	margin-bottom: 18.5px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	max-width: 1300px;
+	width: 100%;
+	font-family: Ubuntu, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	color: $text_main;
+
+	a {
+		text-decoration: none;
+	}
+
+	.delimiter {
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+
+	a,
+	.delimiter {
+		color: $dark_gray;
+	}
+
+	&-home {
+		font-size: 0;
+		line-height: 0;
+	}
+
+	&--posts {
+			font-size: 12px;
+			line-height: 14px;
+			color: $text_main;
+
+			.link {
+				color: $dark_gray;
+			}
+
+			.icon {
+				display: inline-flex;
+			}
+
+			.delimiter {
+				display: inline-block;
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+		}
+}

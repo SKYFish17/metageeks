@@ -1,0 +1,42 @@
+.feedback-block {
+	width: 100vw;
+	position: relative;
+	margin-top: 100px;
+	margin-left: -50vw;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	height: auto;
+	left: 50%;
+
+	@media (max-width: $mobile-xs) {
+		margin-top: 84px;
+		padding: 40px 10px 80px 10px;
+	}
+
+	&__title {
+		font-family: $artz, sans-serif;
+		font-weight: 600;
+		font-size: 36px;
+		line-height: 39px;
+		text-align: center;
+		margin-bottom: 40px;
+
+		@media (max-width: $mobile-xs) {
+			font-size: 24px;
+			line-height: 26px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__carousel {
+		background-color: $white;
+			border-radius: 8px;
+			padding-top: 43px;
+			padding-bottom: 20px;
+			box-shadow: 0 12px 25px rgba(103, 111, 119, 0.2);
+	}
+
+	.trustpilot-widget {
+		text-align: center;
+	}
+}

@@ -1,0 +1,369 @@
+//--------------------------------------------------------------
+// Global Site Footer
+//--------------------------------------------------------------
+.site-footer {
+	color: $white;
+
+	.top {
+		padding-top: 80px;
+		background-color: $steel_gray;
+	}
+
+	.site-footer__wrapper {
+		padding-bottom: 80px;
+		display: flex;
+		flex-direction: row;
+
+		.subscribe {
+			margin-right: 91px;
+			margin-bottom: 40px;
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			max-width: 298px;
+			width: 100%;
+			font-family: Ubuntu, sans-serif;
+
+			.title {
+				margin-bottom: 22px;
+				font-family: 'hwt_artz', sans-serif;
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 26px;
+			}
+
+			.desc {
+				@include indent-reset();
+				margin-bottom: 20px;
+				font-size: 16px;
+				line-height: 1.4;
+			}
+
+			/* stylelint-disable*/
+			.gform-subscribe_wrapper.gravity-theme {
+				position: relative;
+
+				.gform-subscribe {
+					display: flex;
+				}
+
+				.gform_body {
+					position: relative;
+					max-width: 100%;
+					width: 100%;
+
+					.ginput_container_email {
+						input {
+							@include indent-reset();
+							padding: 16px 65px 16px 0;
+							font-size: 16px;
+							line-height: 1.4;
+							border: none !important;
+							border-bottom: 1px solid $stroke !important;
+							border-radius: 0;
+							background-color: transparent;
+							outline: none;
+
+							&::placeholder {
+								color: $stroke;
+							}
+						}
+					}
+				}
+
+				.gform_footer {
+					@include indent-reset();
+					position: absolute;
+					top: 0;
+					right: 0;
+
+					input {
+						@include indent-reset();
+						padding: 15px;
+						width: 55px;
+						height: 55px;
+						font-size: 0;
+						background-color: $white;
+						border-radius: 4px 4px 0px 0px;
+						background-image: url(../images/icons/subscribe-form-plane.svg);
+						background-repeat: no-repeat;
+						background-position: center center;
+
+						&:hover {
+							background-color: $orange;
+							background-image: url(../images/icons/subscribe-form-plane-white.svg);
+						}
+					}
+				}
+
+				.validation_message {
+					position: relative;
+					margin-top: 15px;
+					padding: 10px 12px 10px 38px ;
+					font-size: 14px;
+					line-height: 16px;
+					color: $red;
+					background-color: $accent_light;
+					border-radius: 4px;
+					border: none;
+
+					&::before {
+						position: absolute;
+						content: '';
+						top: 50%;
+						left: 12px;
+						transform: translateY(-50%);
+						z-index: 2;
+						width: 16px;
+						height: 16px;
+						background: url(../images/icons/error.svg) center center no-repeat;
+					}
+				}
+
+				.gform_validation_errors {
+					display: none;
+				}
+			}
+
+			.gform_confirmation_message {
+				position: relative;
+				margin-top: 15px;
+				padding: 10px 12px 10px 38px ;
+				font-size: 14px;
+				line-height: 16px;
+				color: $green;
+				background-color: $green_light;
+				border-radius: 4px;
+				border: none;
+
+				&::before {
+					position: absolute;
+					content: '';
+					top: 50%;
+					left: 12px;
+					transform: translateY(-50%);
+					z-index: 2;
+					width: 16px;
+					height: 16px;
+					background: url(../images/icons/success.svg) center center no-repeat;
+				}
+			}
+			/* stylelint-enable*/
+
+		}
+
+		.contact-us {
+			display: none;
+		}
+
+		.site-footer__mascot-wrapper {
+			max-width: 196px;
+			max-height: 283px;
+		}
+	}
+
+	.bottom {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		background-color: $text_main;
+
+		.container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.payment-methods {
+			display: flex;
+			flex-direction: column;
+
+			.title {
+				margin-bottom: 15px;
+				font-size: 14px;
+				line-height: 16px;
+			}
+
+			.list {
+				@include list-reset();
+				display: flex;
+
+				.item {
+					&:not(:last-child) {
+						margin-right: 10px;
+					}
+
+					img {
+						width: 38px;
+						height: 24px;
+					}
+				}
+			}
+		}
+
+		.company-info {
+			max-width: 500px;
+			text-align: right;
+		}
+	}
+}
+
+@media (max-width: 1340px) {
+	.site-footer {
+		.site-footer__wrapper {
+			flex-wrap: wrap;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.site-footer {
+		.bottom {
+			.container {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: flex-start;
+			}
+
+			.payment-methods {
+				margin-bottom: 30px;
+			}
+
+			.company-info {
+				max-width: 500px;
+				text-align: left;
+			}
+		}
+	}
+}
+
+@media (max-width: $mobile) {
+	.site-footer {
+		padding: 0;
+
+		> .container {
+			padding-left: 20px;
+			padding-right: 20px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.site-footer__wrapper {
+			padding-bottom: 60px;
+
+			.subscribe {
+				margin-bottom: 40px;
+				max-width: 335px;
+
+				.title {
+					margin-bottom: 20px;
+				}
+
+				.desc {
+					margin-bottom: 37px;
+				}
+			}
+
+			.footer-navigation {
+				width: 100%;
+			}
+
+			.contact-us {
+				display: flex;
+				flex-direction: column;
+				max-width: 256px;
+				font-family: Ubuntu, sans-serif;
+
+				.title {
+					margin-bottom: 28px;
+					font-family: 'hwt_artz', sans-serif;
+					font-size: 16px;
+					line-height: 17px;
+					letter-spacing: 0.01em;
+				}
+
+				.desc {
+					@include indent-reset();
+					margin-bottom: 20px;
+					font-size: 16px;
+					line-height: 1.4;
+
+					a {
+						text-decoration: underline;
+
+						&:hover {
+							color: $orange;
+							cursor: pointer;
+						}
+					}
+				}
+
+				.social-icons {
+					@include list-reset();
+					display: flex;
+					align-items: center;
+
+					li {
+						@include indent-reset();
+
+						svg {
+							fill: $white;
+						}
+
+						&.facebook {
+							margin-right: 23px;
+							order: 0;
+
+							svg {
+								width: 10px;
+								height: 20px;
+							}
+						}
+
+						&.instagram {
+							order: 2;
+
+							svg {
+								width: 22px;
+								height: 18px;
+							}
+						}
+
+						&.twitter {
+							margin-right: 23px;
+							order: 1;
+
+							svg {
+								width: 22px;
+								height: 22px;
+							}
+						}
+
+						&:hover {
+							svg {
+								fill: $orange;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.bottom {
+			.payment-methods {
+				.list {
+					display: grid;
+					grid-template-columns: repeat(5, 36px);
+					grid-column-gap: 10px;
+					grid-row-gap: 12px;
+
+					/* stylelint-disable*/
+					.item {
+						margin-right: 0 !important;
+					}
+					/* stylelint-enable*/
+				}
+			}
+		}
+	}
+}
